@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
+import { fetchCountries } from '../actions';
+import { connect } from 'react-redux';
 
-export default class SearchBar extends Component {
-  componentWillMount = () => {};
+class SearchBar extends Component {
+  componentWillMount = () => {
+    this.props.fetchCountries();
+  };
 
   renderSelectCountries = () => {
     return (
@@ -15,3 +19,11 @@ export default class SearchBar extends Component {
     return <form>{this.renderSelectCountries()}</form>;
   }
 }
+const mapDispatchToPros = {
+  fetchCountries,
+};
+
+export default connect(
+  undefined,
+  mapDispatchToPros
+)(SearchBar);
