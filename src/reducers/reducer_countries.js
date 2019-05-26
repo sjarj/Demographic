@@ -23,6 +23,6 @@ const getCountriesInfo = data => {
       };
     })
     .filter(c => {
-      c.currencyCode != `USD`;
+      return c.currencyCode !== `USD`;
     });
 };
