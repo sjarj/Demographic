@@ -9,7 +9,9 @@ class SearchBar extends Component {
 
   renderSelectCountries = () => {
     return (
-      <select className="form-control search_bar">
+      <select
+        onChange={e => this.onChangeCountry(e)}
+        className="form-control search_bar">
         {this.props.countries.map(country => (
           <option key={country.code} value={country.code}>
             {country.name}
@@ -17,6 +19,10 @@ class SearchBar extends Component {
         ))}
       </select>
     );
+  };
+
+  onChangeCountry = e => {
+    console.log(e.target.value);
   };
 
   render() {
