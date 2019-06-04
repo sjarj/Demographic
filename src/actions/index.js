@@ -17,7 +17,7 @@ export const fetchRateExange = country => {
       .get(
         `https://api.exchangeratesapi.io/history?start_at=${getLastMonth()}&end_at=${formatDate(
           new Date()
-        )}&base=USD&symbols=${country.currentcyCode}`
+        )}&base=USD&symbols=${country.currencyCode}`
       )
       .then(axiosResponse => {
         dispatch({
