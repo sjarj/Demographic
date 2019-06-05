@@ -7,9 +7,7 @@ class RateExangeList extends Component {
       <table className="table">
         <thead>
           <tr>
-            <th>Pays</th>
-          </tr>
-          <tr className="col-md-6">
+            <th className="col-md-6">Pays</th>
             <th>Valeur de la monnaie par apport au dollar</th>
           </tr>
         </thead>
