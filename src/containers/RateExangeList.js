@@ -14,7 +14,7 @@ class RateExangeList extends Component {
         <tbody>
           {this.props.rateExangeList.map((rate, index) => {
             return (
-              <RateExangeListItem key={rate.code + index} rateExange={rate} />
+              <RateExangeListItem key={rate.code + index} rateExchange={rate} />
             );
           })}
         </tbody>
@@ -24,7 +24,6 @@ class RateExangeList extends Component {
 }
 
 const mapStateToProps = state => {
-  console.log(state);
   return { rateExangeList: state.rateExangeReducer.rateExangeList };
 };
 

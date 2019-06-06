@@ -22,7 +22,7 @@ export const fetchRateExange = country => {
       .then(axiosResponse => {
         dispatch({
           type: GET_RATE_EXANGE,
-          payload: { rate: axiosResponse.data.rates, ...country },
+          payload: { rates: axiosResponse.data.rates, ...country },
         });
       });
   };
